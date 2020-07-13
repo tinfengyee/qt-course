@@ -13,6 +13,8 @@ function wranning(str) {
     console.warn(str)
   }
 }
+// 颜色配置单独导出
+import color from './libs/function/color.js'
 
 // 导出rView工具函数
 import {
@@ -40,11 +42,10 @@ import {
 import config from './config/config.js'
 // 各个需要fixed的地方的z-index配置文件
 import zIndex from './config/zIndex.js'
-
 const $r = {
   config,
   zIndex,
-  type: ['primary', 'success', 'error', 'warning', 'info'],
+  type: ['base', 'primary', 'success', 'error', 'warning', 'info'],
   toast,
   http,
   get: http.get,
@@ -53,6 +54,7 @@ const $r = {
   'delete': http.delete,
   $parent,
   addUnit,
+  color,
   colorGradient,
   colorGradient: colorGradient.colorGradient,
   hexToRgb: colorGradient.hexToRgb,

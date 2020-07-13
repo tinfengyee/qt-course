@@ -4,6 +4,7 @@ import queryParams from '../../libs/function/queryParams.js';
  * 注意:本方法没有对跳转的回调函数进行封装
  */
 function route(options = {}, params = false) {
+  console.log(options);
 	let config = {
 		type: 'navigateTo',
 		url: '',
