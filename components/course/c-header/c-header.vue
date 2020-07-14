@@ -10,6 +10,9 @@
         }">{{title}}</text>
         <r-image width="46" height="46" :src="logo"></r-image>
       </view>
+      <view class="time r-m-t-6" v-if="showTime">
+        <text>01-09-2020</text>
+      </view>
     </view>
   </view>
 </template>
@@ -33,6 +36,10 @@
         type: String,
         default: '/static/img/logo_01.png'
       },
+      showTime: {
+        type: Boolean,
+        default: false
+      },
       row: {
         type: Boolean,
         default: false
@@ -54,13 +61,19 @@
   }
   .content {
     display: flex;
-    align-items: center;
-    
+    align-items: flex-start;
+    flex-direction: column;
   }
   .header-content {
-    
+    display: flex;
+    align-items: flex-end;
   }
   .title {
-    
+    line-height: 1;
+  }
+  .time {
+    font-size: 34rpx;
+    font-weight: 600;
+    color: #676868;
   }
 </style>

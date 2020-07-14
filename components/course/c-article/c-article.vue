@@ -2,15 +2,15 @@
   <view class="c-article-item" :style="articleStyle">
     <view class="article-image">
       <r-image v-if="row" width="324" height="240" mode="aspectFill" :src="src" borderRadius="20"></r-image>
+      <r-image v-if="!row && !show" width="350" height="260" mode="aspectFill" :src="src" borderRadius="20"></r-image>
       <r-image v-if="!row && show" width="350" mode="widthFix" :src="src" borderRadius="20"></r-image>
-      <r-image v-else width="350" height="260" mode="aspectFill" :src="src" borderRadius="20"></r-image>
     </view>
     <view class="content-box r-m-l-8">
       <view class="user-info r-m-t-10" v-if="show">
         <r-avatar class="avatar" :src="headImg" size="45"></r-avatar>
         <text class="name r-m-l-8">{{name}}</text>
       </view>
-      <view class="count-box" v-if="show" :style="{ order: row ? '5' : '2' }">
+      <view class="count-box r-m-t-10" v-if="show" :style="{ order: row ? '5' : '2' }">
         <text>10點讚</text>
         <text>5收藏</text>
       </view>
@@ -105,5 +105,6 @@
   }
   .title {
     order: 3;
+    width: 100%;
   }
 </style>

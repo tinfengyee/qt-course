@@ -93,7 +93,7 @@
       // 是否需要淡入效果
       fade: {
         type: Boolean,
-        default: true
+        default: false
       },
       // 只支持网络资源，只对微信小程序有效
       webp: {
@@ -182,7 +182,7 @@
   @import "../../libs/css/style.components.scss";
 
   .r-image {
-    background-color: $r-bg-color;
+    // background-color: $r-bg-color;
     position: relative;
     transition: opacity 0.5s ease-in-out;
 

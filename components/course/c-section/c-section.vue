@@ -2,10 +2,10 @@
   <view class="c-section">
     <r-section>
       <view class="c-section-title" :style="{
-        paddingLeft: `${paddingLeft}rpx`,
+        padding: `0 ${padding}rpx`,
         borderRadius: circle ? `${radius}rpx` : 0
         }" slot="title">
-        名稱
+        {{title}}
       </view>
       <view class="c-right-all" slot="right" @tap="rightClick">
         所有課程
@@ -21,13 +21,13 @@
       // 标题信息
       title: {
         type: String,
-        default: ''
+        default: '名稱'
       },
       rText: {
         type: String,
         default: ''
       },
-      paddingLeft: {
+      padding: {
         type: [String, Number],
         default: 20
       },
@@ -62,7 +62,7 @@
     background-color: $r-type-base-color;
     font-weight: bold;
     font-size: 56rpx;
-    padding: 2rpx 20rpx;
+    padding: 0 20rpx;
   }
 
   .c-right-all {

@@ -1,6 +1,19 @@
 <template>
   <view class="content">
-    <view class="" @click="$r.route('pages/home/home')">
+    <view class="" @click="$r.route({
+      url: 'pages/home/home',
+      type: 'switchTab'
+    })">
+      跳转HOME
+    </view>
+    <view class="" @click="$r.route({url: 'pages/home/home'})">
+      跳转HOME
+    </view>
+    
+    <view class="" @click="$r.route({
+      url: 'pages/home/home',
+      type: 'switchTab'
+    })">
       跳转HOME
     </view>
   </view>
@@ -28,6 +41,7 @@
       }
     },
     onLoad() {
+      // uni.hideTabBar({})
       this.$http.get('products').then(res => {
         console.log(res);
         console.log(this.timeFormat);
