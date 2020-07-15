@@ -55,7 +55,7 @@
       // 提示的文字颜色
       color: {
         type: String,
-        default: '#2979ff'
+        default: '#be1f2d'
       },
       // 提示文字的大小
       fontSize: {
@@ -67,7 +67,7 @@
         type: Object,
         default () {
           return {
-            backgroundImage: "linear-gradient(-180deg, rgba(255, 255, 255, 0) 0%, #fff 80%)",
+            backgroundImage: "linear-gradient(-180deg, rgba(255, 255, 255, 0) 50%, #fff 80%)",
             paddingTop: "300rpx",
             marginTop: "-300rpx"
           }

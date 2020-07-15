@@ -36,7 +36,7 @@
       },
       borderRadius: {
         type: [Number, String],
-        default: 20
+        default: 16
       },
       size: {
         type: String,
@@ -83,6 +83,10 @@
     &-type-other {
       color: #000000;
       background-color: #e5e6e7;
+    }
+    &-type-plain {
+      color: $r-type-base-color;;
+      background-color: #FFFFFF;
     }
   }
 </style>

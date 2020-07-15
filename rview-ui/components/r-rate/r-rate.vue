@@ -67,7 +67,7 @@
       // 选中的颜色
       activeColor: {
         type: String,
-        default: '#FA3534'
+        default: '#ffd103'
       },
       // 星星之间的间距，单位rpx
       gutter: {

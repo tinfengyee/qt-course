@@ -26,17 +26,25 @@
       "style": {
         "navigationStyle": "custom"
       }
+    }, {
+      "path": "pages/course/courseBought",
+      "style": {}
+    }, {
+      "path": "pages/course/courseCollected",
+      "style": {}
+    }, {
+      "path": "pages/course/courseDetail/courseDetail",
+      "style": {
+        "navigationBarTitleText": "課程詳情"
+      }
+    }, {
+      "path": "pages/course/buyCourse",
+      "style": {
+        "navigationBarTitleText": "購買課程"
+      }
     }
       ,{
-            "path" : "pages/course/courseBought",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/course/courseCollected",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/course/courseDetail/courseDetail",
+            "path" : "pages/teacher/teacher",
             "style" : {}
         }
     ],
