@@ -1,8 +1,16 @@
 <template>
   <view class="c-input" @tap.stop="inputClick">
-    <textarea v-if="type == 'textarea'" class="c-input__input c-input__textarea" :value="value" :placeholder="placeholder"
-      :placeholderStyle="placeholderStyle" :disabled="disabled" :maxlength="inputMaxlength" :fixed="fixed" :autoHeight="autoHeight"
-      @input="handleInput" @confirm="onConfirm" />
+    <textarea v-if="type == 'textarea'"
+     class="c-input__input c-input__textarea"
+      :value="value"
+       :placeholder="placeholder"
+      :placeholderStyle="placeholderStyle"
+       :disabled="disabled"
+       :maxlength="inputMaxlength"
+        :fixed="fixed"
+        :autoHeight="autoHeight"
+      @input="handleInput"
+       @confirm="onConfirm" />
     <input
     			v-else
     			class="c-input__input"
@@ -113,6 +121,9 @@
       border-radius: 20rpx;
       padding: 20rpx;
       background-color: #ccced0;
+    }
+    &__textarea {
+      min-height: 180rpx;
     }
   }
   .holder-class {

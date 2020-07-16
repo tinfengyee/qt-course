@@ -1,9 +1,15 @@
 <template>
   <view class="c-article-item" :style="articleStyle">
     <view class="article-image">
-      <r-image v-if="row" width="324" height="240" mode="aspectFill" :src="src" borderRadius="20"></r-image>
-      <r-image v-if="!row && !show" width="350" height="260" mode="aspectFill" :src="src" borderRadius="20"></r-image>
-      <r-image v-if="!row && show" width="350" mode="widthFix" :src="src" borderRadius="20"></r-image>
+      <block v-if="self">
+        <r-image width="350" mode="widthFix" :src="src" borderRadius="20"></r-image>
+      </block>
+      <block v-else>
+        <!-- 判断有点多, 加着加着就乱写了 -->
+        <r-image v-if="row" width="324" height="240" mode="aspectFill" :src="src" borderRadius="20"></r-image>
+        <r-image v-if="!row && !show" width="350" height="260" mode="aspectFill" :src="src" borderRadius="20"></r-image>
+        <r-image v-if="!row && show" width="350" mode="widthFix" :src="src" borderRadius="20"></r-image>
+      </block>
     </view>
     <view class="content-box r-m-l-8">
       <view class="user-info r-m-t-10" v-if="show">
@@ -16,6 +22,10 @@
       </view>
       <view class="title r-line-2 r-m-t-10">
         {{title}}
+      </view>
+      <view class="count-box r-m-t-2" v-if="!show && self" :style="{ order: 5 }">
+        <text>10點讚</text>
+        <text>5收藏</text>
       </view>
     </view>
   </view>
@@ -54,6 +64,11 @@
       show: {
         type: Boolean,
         default: true
+      },
+      // 导师个人页面文章
+      self: { 
+        type: Boolean,
+        default: false
       }
 
     },
