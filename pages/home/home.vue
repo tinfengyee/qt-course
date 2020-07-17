@@ -1,5 +1,6 @@
 <template>
   <view class="content">
+
     <view class="search r-padding-10">
       <r-search searchIcon="/static/img/search.png" :showAction="false" :disabled="true"></r-search>
     </view>
@@ -75,7 +76,10 @@
         </view>
       </view>
     </view>
-
+    <!-- tabbar -->
+    <view class="tabbar">
+      <c-tabbar></c-tabbar>
+    </view>
   </view>
 </template>
 
@@ -146,7 +150,7 @@
       };
     },
     onLoad() {
-      // uni.hideTabBar({})
+      uni.hideTabBar()
       console.log(this.$r.color.base);
     },
     onShow() {
@@ -164,6 +168,7 @@
   .content-body {
     margin-top: 24rpx;
   }
+
   .article-item {
     padding: 6rpx;
     margin: 6rpx;
@@ -191,6 +196,7 @@
         background-color: #e5e6e7;
         font-weight: 600;
         line-height: 1.8;
+
         &::after {
           border: none;
         }

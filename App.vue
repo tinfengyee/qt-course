@@ -14,6 +14,12 @@
 
 <style lang="scss">
   @import "rview-ui/index.scss";
-  @import 'static/css/common.scss'
-	// @import "static/css/common.scss";
+  @import 'static/css/common.scss';
+	.tabbar {
+	  position: fixed;
+	  left: 0;
+	  right: 0;
+	  bottom:50rpx;
+	  z-index: 66;
+	}
 </style>

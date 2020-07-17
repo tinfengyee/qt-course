@@ -83,6 +83,10 @@
         </view>
       </view>
     </view>
+    <!-- tabbar -->
+    <view class="tabbar">
+      <c-tabbar></c-tabbar>
+    </view>
   </view>
 </template>
 
@@ -100,6 +104,9 @@
         }],
         tabCurrent: 0
       };
+    },
+    onLoad() {
+      uni.hideTabBar()
     }
   }
 </script>

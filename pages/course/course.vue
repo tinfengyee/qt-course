@@ -25,7 +25,7 @@
             <c-section title="名稱"></c-section>
           </view>
           <view class="course-content r-m-t-30">
-            <scroll-view class="scroll-view_h" enable-flex scroll-x="true" @scroll="scroll" @scrolltolower="scrolltolower" scroll-left="120">
+            <scroll-view class="scroll-view_h" enable-flex scroll-x="true" @scroll="scroll" @scrolltolower="scrolltolower">
               <view class="scroll-course-item">
                 <c-course></c-course>
               </view>
@@ -47,7 +47,7 @@
             <c-section title="名稱"></c-section>
           </view>
           <view class="course-content r-m-t-30">
-            <scroll-view class="scroll-view_h" enable-flex scroll-x="true" @scroll="scroll" @scrolltolower="scrolltolower" scroll-left="120">
+            <scroll-view class="scroll-view_h" enable-flex scroll-x="true" @scroll="scroll" @scrolltolower="scrolltolower">
               <view class="scroll-course-item">
                 <c-course></c-course>
               </view>
@@ -64,6 +64,10 @@
           </view>
         </view>
       </view>
+    </view>
+    <!-- tabbar -->
+    <view class="tabbar">
+      <c-tabbar></c-tabbar>
     </view>
 	</view>
 </template>
@@ -101,6 +105,9 @@
 				],
 			};
 		},
+    onLoad() {
+      uni.hideTabBar()
+    },
     methods: {
       scroll(e) {
         // console.log(e);
