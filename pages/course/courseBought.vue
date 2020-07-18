@@ -1,10 +1,10 @@
 <template>
   <view class="content">
     <view class="course r-p-16">
-      <view class="c-course-item r-m-b-24">
+      <view class="c-course-item r-m-b-24" @click.native="$r.route('pages/course/yigouCourse')">
         <c-course width="274" height="202" col tName="老师名称" :showRate="false" :showPrice="false"></c-course>
       </view>
-      <view class="c-course-item r-m-b-24">
+      <view class="c-course-item r-m-b-24" @click.native="$r.route('pages/course/yigouCourse')">
         <c-course width="274" height="202" col tName="老师名称" :showRate="false" :showPrice="false"></c-course>
       </view>
     </view>

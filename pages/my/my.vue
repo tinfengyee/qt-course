@@ -16,7 +16,7 @@
     </view>
     <!-- collection收藏 -->
     <view class="collection-wrap r-m-t-50">
-      <view class="collection-item">
+      <view class="collection-item" @click="$r.route('pages/my/favorite')">
         <view class="collection">
           <view class="collection-img">
             <r-image width="350" height="259" :src="img"></r-image>

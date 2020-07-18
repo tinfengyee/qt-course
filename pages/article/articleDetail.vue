@@ -110,7 +110,7 @@
            <c-section title="名稱"></c-section>
          </view>
          <view class="course-content r-m-t-30">
-           <scroll-view class="scroll-view_h" enable-flex scroll-x="true" @scroll="scroll" @scrolltolower="scrolltolower" scroll-left="120">
+           <scroll-view class="scroll-view_h" enable-flex scroll-x="true" @scroll="scroll" @scrolltolower="scrolltolower">
              <view class="scroll-course-item">
                <c-course></c-course>
              </view>
@@ -132,7 +132,7 @@
            <c-section title="名稱"></c-section>
          </view>
          <view class="course-content r-m-t-30">
-           <scroll-view class="scroll-view_h" enable-flex scroll-x="true" @scroll="scroll" @scrolltolower="scrolltolower" scroll-left="120">
+           <scroll-view class="scroll-view_h" enable-flex scroll-x="true" @scroll="scroll" @scrolltolower="scrolltolower">
              <view class="scroll-course-item">
                <c-course></c-course>
              </view>
@@ -183,6 +183,9 @@
         open: false
 			};
 		},
+    onLoad(options) {
+      console.log(options);
+    },
     methods: {
       openLy() {
         this.open = !this.open
@@ -276,7 +279,7 @@
     .ly-all-arrow {
       font-size: 50rpx;
       transform: rotate(90deg) translateX(7px);
-      transition: transform .1s linear;
+      transition: transform .2s linear;
     }
     .ly-all-arrow_roate {
       transform: rotate(-90deg) translateX(-7px);

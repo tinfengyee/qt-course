@@ -48,7 +48,7 @@
       },
       padding: {
         type: [Number, String],
-        default: 26
+        default: 30
       }
     },
     methods: {

@@ -94,9 +94,15 @@
 
 <style lang="scss">
   .c-article-item {
+    flex: 1;
     // display: flex;
     // align-items: center;
     
+  }
+  .article-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .content-box {
     display: flex;

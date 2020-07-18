@@ -22,4 +22,7 @@
 	  bottom:50rpx;
 	  z-index: 66;
 	}
+  .tabbar-holder {
+    padding-bottom: 180rpx;
+  }
 </style>

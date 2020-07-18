@@ -41,7 +41,7 @@
       }
     },
     onLoad() {
-      // uni.hideTabBar({})
+      uni.hideTabBar({})
       this.$http.get('products').then(res => {
         console.log(res);
         console.log(this.timeFormat);

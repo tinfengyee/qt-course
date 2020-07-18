@@ -1,28 +1,35 @@
 <template>
-  <view class="content">
-
+  <view class="content tabbar-holder">
+    <!-- search -->
     <view class="search r-padding-10">
       <r-search searchIcon="/static/img/search.png" :showAction="false" :disabled="true"></r-search>
     </view>
+    <!-- banner -->
     <view class="banner">
       <r-swiper height="442" :list="imgList"></r-swiper>
     </view>
+    <!-- tabs -->
     <view class="tabs">
       <r-tabs :list="tabList" fontSize="58" :bold="false" barWidth="140" :current="tabCurrent" @change="tabChange"
         activeColor="#000000" inactiveColor="#858585" :barStyle="barStyle"></r-tabs>
     </view>
-    <view v-if="tabCurrent == 0" class="content-body">
+    <!-- tab: 推荐 -->
+    <view class="content-body" v-if="tabCurrent == 0">
       <r-waterfall v-model="imgList">
         <template v-slot:left="{leftList}">
           <view v-for="(item, index) in leftList" :key="index">
-            <view class="article-item" @click="$r.route('pages/article/articleDetail')">
+            <view class="article-item" @click="$r.route('pages/article/articleDetail', {
+              id: index
+            })">
               <c-article :src="item.image"></c-article>
             </view>
           </view>
         </template>
         <template v-slot:right="{rightList}">
           <view v-for="(item, index) in rightList" :key="index">
-            <view class="article-item" @click="$r.route('pages/article/articleDetail')">
+            <view class="article-item" @click="$r.route('pages/article/articleDetail', {
+              id: index
+            })">
               <c-article :src="item.image"></c-article>
             </view>
             <!-- 这里编写您的内容，item为您传递给v-model的数组元素 -->
@@ -30,22 +37,23 @@
         </template>
       </r-waterfall>
     </view>
+    <!-- tab: 追踪 -->
     <view class="content-body track" v-if="tabCurrent == 1">
       <view class="article r-m-b-40">
         <view class="article-header r-m-l-20">
           <c-header></c-header>
         </view>
         <view class="article-body r-m-t-10">
-          <view class="article-item">
+          <view class="article-item" @click="$r.route('pages/article/articleDetail')">
             <c-article :src="img" :show="false"></c-article>
           </view>
-          <view class="article-item">
+          <view class="article-item" @click="$r.route('pages/article/articleDetail')">
             <c-article :src="img" :show="false"></c-article>
           </view>
-          <view class="article-item">
+          <view class="article-item" @click="$r.route('pages/article/articleDetail')">
             <c-article :src="img" :show="false"></c-article>
           </view>
-          <view class="article-item">
+          <view class="article-item" @click="$r.route('pages/article/articleDetail')">
             <c-article :src="img" :show="false"></c-article>
           </view>
         </view>
@@ -58,21 +66,21 @@
           <c-header></c-header>
         </view>
         <view class="article-body r-m-t-10">
-          <view class="article-item">
+          <view class="article-item" @click="$r.route('pages/article/articleDetail')">
             <c-article :src="img" :show="false"></c-article>
           </view>
-          <view class="article-item">
+          <view class="article-item" @click="$r.route('pages/article/articleDetail')">
             <c-article :src="img" :show="false"></c-article>
           </view>
-          <view class="article-item">
+          <view class="article-item" @click="$r.route('pages/article/articleDetail')">
             <c-article :src="img" :show="false"></c-article>
           </view>
-          <view class="article-item">
+          <view class="article-item" @click="$r.route('pages/article/articleDetail')">
             <c-article :src="img" :show="false"></c-article>
           </view>
         </view>
         <view class="article-all r-m-t-10 r-flex r-row-center">
-          <button size="mini" class="all-btn">所有文章</button>
+          <button size="mini" class="all-btn" @click="$r.route('pages/article/article')">所有文章</button>
         </view>
       </view>
     </view>
@@ -173,7 +181,7 @@
     padding: 6rpx;
     margin: 6rpx;
   }
-
+  // 追踪
   .track {
     .article {
       .article-header {}

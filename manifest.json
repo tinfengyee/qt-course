@@ -50,7 +50,23 @@
             /* ios打包配置 */
             "ios" : {},
             /* SDK配置 */
-            "sdkConfigs" : {}
+            "sdkConfigs" : {},
+            "splashscreen" : {
+                "ios" : {
+                    "iphone" : {
+                        "retina47" : "static/img/splanimg.png",
+                        "portrait-896h@3x" : "static/img/splanimg.png",
+                        "portrait-896h@2x" : "static/img/splanimg.png",
+                        "iphonex" : "static/img/splanimg.png",
+                        "retina55" : "static/img/splanimg.png",
+                        "retina40" : "static/img/splanimg.png"
+                    }
+                },
+                "android" : {
+                    "xhdpi" : "static/img/splanimg.png",
+                    "xxhdpi" : "static/img/splanimg.png"
+                }
+            }
         }
     },
     /* 快应用特有相关 */
@@ -72,7 +88,7 @@
     "mp-toutiao" : {
         "usingComponents" : true
     },
-    "uniStatistics": {  
-        "enable": false
+    "uniStatistics" : {
+        "enable" : false
     }
 }

@@ -30,12 +30,14 @@
       }
     }, {
       "path": "pages/course/courseBought",
+      "style": {
+        "navigationBarTitleText": "已購課程"
+      }
+    }, {
+      "path": "pages/course/courseList",
       "style": {}
     }, {
-      "path": "pages/course/courseCollected",
-      "style": {}
-    }, {
-      "path": "pages/course/courseDetail/courseDetail",
+      "path": "pages/course/courseDetail",
       "style": {
         "navigationBarTitleText": "課程詳情"
       }
@@ -48,12 +50,50 @@
       "path": "pages/teacher/teacher",
       "style": {}
     }, {
-      "path": "pages/course/yigouCourse/yigouCourse",
+      "path": "pages/course/yigouCourse",
       "style": {}
     }, {
       "path": "pages/my/settings",
       "style": {
         "navigationBarTitleText": "設置"
+      }
+    }, {
+      "path": "pages/my/favorite",
+      "style": {}
+    }, {
+      "path": "pages/my/favoriteManage",
+      "style": {
+        "navigationBarTitleText": "編輯收藏夾"
+      }
+    }, {
+      "path": "pages/my/addFavorite",
+      "style": {
+        "navigationBarTitleText": "我的收藏"
+      }
+    }, {
+      "path": "pages/public/login",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    }, {
+      "path": "pages/public/register",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    }, {
+      "path": "pages/public/forgotResult",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    }, {
+      "path": "pages/public/forgot",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    }, {
+      "path": "pages/public/interested",
+      "style": {
+        "navigationStyle": "custom"
       }
     }
   ],
@@ -69,21 +109,12 @@
     "borderStyle": "white",
     "backgroundColor": "#ffffff",
     "list": [{
-        "pagePath": "pages/course/course",
-        "iconPath": "static/img/tabbar/kecheng.png",
-        "selectedIconPath": "static/img/tabbar/kecheng.png",
-        "text": "課程"
+        "pagePath": "pages/course/course"
       },
       {
-        "pagePath": "pages/home/home",
-        "iconPath": "static/img/tabbar/home.png",
-        "selectedIconPath": "static/img/tabbar/home.png",
-        "text": "首頁"
+        "pagePath": "pages/home/home"
       }, {
-        "pagePath": "pages/my/my",
-        "iconPath": "static/img/tabbar/my.png",
-        "selectedIconPath": "static/img/tabbar/my.png",
-        "text": "我的"
+        "pagePath": "pages/my/my"
       }
     ]
   },

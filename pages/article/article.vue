@@ -5,16 +5,16 @@
         <c-header></c-header>
       </view>
       <view class="article-body r-m-t-10">
-        <view class="article-item">
+        <view class="article-item" @click="$r.route('pages/article/articleDetail')">
           <c-article :src="img" :show="false"></c-article>
         </view>
-        <view class="article-item">
+        <view class="article-item" @click="$r.route('pages/article/articleDetail')">
           <c-article :src="img" :show="false"></c-article>
         </view>
-        <view class="article-item">
+        <view class="article-item" @click="$r.route('pages/article/articleDetail')">
           <c-article :src="img" :show="false"></c-article>
         </view>
-        <view class="article-item">
+        <view class="article-item" @click="$r.route('pages/article/articleDetail')">
           <c-article :src="img" :show="false"></c-article>
         </view>
       </view>

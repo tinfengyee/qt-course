@@ -13,7 +13,7 @@
       <view class="t-name">
         名稱
       </view>
-      <c-button height="65">導師檔案</c-button>
+      <c-button height="65" @click="$r.route('pages/teacher/teacher')">導師檔案</c-button>
     </view>
     <!-- tabs -->
     <view class="tabs r-m-t-10">
